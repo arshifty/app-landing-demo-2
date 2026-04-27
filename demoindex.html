@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Responsive App Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif
+        }
+
+        body {
+            background: #f5f7fa
+        }
+
+        /* HERO ANIMATION (LOAD FADE IN) */
+        .fade-in {
+            animation: fadeIn 1.2s ease forwards;
+            
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+
+            from {
+                opacity: 0;
+                transform: translateY(30px)
+            }
+        }
+
+        /* SCROLL ANIMATION */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 0.8s
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 10%;
+            color: #fff;
+            flex-wrap: wrap
+        }
+
+        .hero-text {
+            max-width: 500px
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            line-height: 1.2
+        }
+
+        .hero-text p {
+            margin: 20px 0
+        }
+
+        .hero img {
+            width: 300px;
+            animation: float 3s ease-in-out infinite
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-15px)
+            }
+
+            100% {
+                transform: translateY(0)
+            }
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background: #fff;
+            color: #333;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-right: 10px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 80px 10%;
+            text-align: center
+        }
+
+        /* FEATURES */
+        .feature-box {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap
+        }
+
+        .card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            width: 260px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: 0.3s
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.03)
+        }
+
+        /* MOCKUP */
+        .mockup img {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2)
+        }
+
+        /* TESTIMONIAL */
+        .test-box {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap
+        }
+
+        .testimonial {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            width: 260px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+        }
+
+        /* PRICING */
+        .price-box {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap
+        }
+
+        .price-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            width: 260px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: 0.3s
+        }
+
+        .price-card:hover {
+            transform: scale(1.05)
+        }
+
+        /* CTA */
+        .cta {
+            background: #4facfe;
+            color: #fff
+        }
+
+        .cta .btn {
+            background: #fff;
+            color: #333
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #222;
+            color: #fff
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media(max-width:768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center
+            }
+
+            .hero img {
+                margin-top: 30px;
+                width: 220px
+            }
+
+            .hero-text h1 {
+                font-size: 32px
+            }
+
+            .section {
+                padding: 60px 5%
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text fade-in">
+            <h1>Boost Your Productivity</h1>
+            <p>Manage your work smarter & faster with our powerful app.</p>
+            <a href="#" class="btn">Google Play</a>
+            <a href="#" class="btn">App Store</a>
+        </div>
+        <img src="image1.png"  class="fade-in">
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section fade-up">
+        <h2>Awesome Features</h2>
+        <div class="feature-box">
+            <div class="card">
+                <h3>Easy Use</h3>
+                <p>User-friendly interface</p>
+            </div>
+            <div class="card">
+                <h3>Fast</h3>
+                <p>Lightning speed performance</p>
+            </div>
+            <div class="card">
+                <h3>Secure</h3>
+                <p>100% data protection</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MOCKUP -->
+    <section class="section mockup fade-up">
+        <h2>App Preview</h2>
+        <img src="image2.png">
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section class="section fade-up">
+        <h2>What Users Say</h2>
+        <div class="test-box">
+            <div class="testimonial">⭐ "Amazing experience!"</div>
+            <div class="testimonial">⭐ "Super helpful app"</div>
+            <div class="testimonial">⭐ "Highly recommend"</div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section fade-up">
+        <h2>Pricing Plans</h2>
+        <div class="price-box">
+            <div class="price-card">
+                <h3>Basic</h3>
+                <p>$9/mo</p>
+            </div>
+            <div class="price-card">
+                <h3>Pro</h3>
+                <p>$19/mo</p>
+            </div>
+            <div class="price-card">
+                <h3>Premium</h3>
+                <p>$39/mo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta fade-up">
+        <h2>Start Free Trial Today</h2>
+        <p>No credit card required</p>
+        <a href="#" class="btn">Get Started</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Your App Name</p>
+    </footer>
+
+    <script>
+        const elements = document.querySelectorAll('.fade-up');
+        window.addEventListener('scroll', () => {
+            let trigger = window.innerHeight * 0.85;
+            elements.forEach(el => {
+                let top = el.getBoundingClientRect().top;
+                if (top < trigger) { el.classList.add('show') }
+            })
+        });
+    </script>
+
+</body>
+
+</html>
